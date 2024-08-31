@@ -1,0 +1,108 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+/* Reset some basic styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #007BFF;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+.column {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tasks {
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+.task {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task:hover {
+  background-color: #dee2e6;
+}
+
+.add-task, .add-column {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.button {
+  padding: 8px 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+  }
+
+  .column {
+    width: 100%; /* Full width on mobile */
+    margin: 10px 0; /* Add margin for spacing */
+  }
+}

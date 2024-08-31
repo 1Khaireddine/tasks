@@ -1,0 +1,13 @@
+<div data-controller="board" class="container">
+  <h1 class="title">Task Manager</h1>
+  <div class="columns" data-board-target="columns">
+    <%= render @columns %>
+  </div>
+
+  <div class="add-column">
+    <%= form_with(model: Column.new, local: false) do |form| %>
+      <%= form.text_field :name, placeholder: "New Column", class: "input" %>
+      <%= form.submit "Add Column", class: "button" %>
+    <% end %>
+  </div>
+</div>

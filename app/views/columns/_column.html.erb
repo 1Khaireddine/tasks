@@ -1,0 +1,13 @@
+<div data-column-id="<%= column.id %>" class="column">
+  <h3 class="column-title"><%= column.name %></h3>
+  <div class="tasks" data-column-target="tasks">
+    <%= render column.tasks %>
+  </div>
+
+  <div class="add-task">
+    <%= form_with(model: Task.new, url: column_tasks_path(column), local: false) do |form| %>
+      <%= form.text_field :name, placeholder: "New Task", class: "input" %>
+      <%= form.submit "Add Task", class: "button" %>
+    <% end %>
+  </div>
+</div>
